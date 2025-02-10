@@ -29,5 +29,6 @@ import './popup.css';
   }
 
   document.addEventListener('DOMContentLoaded', setUpButtons);
+  document.getElementById('redmine-number').focus()
 
 })();
