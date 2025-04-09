@@ -1,15 +1,25 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Bitongithub
+# <img src="public/icons/icon_128.png" width="45" align="left">   RedmineViewer
 
-My Chrome Extension
+Biton Redmine Viewer (Quick Opener)
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Allows faster navigation to Redmine pages for specific issues allowing a keyboard-only approach 
 
 ## Install
 
+Requires Chrome browser to use. If the extension was somehow published install from the below:
 [**Chrome** extension]()
+
+## Local Install
+
+Clone the repo and in the root directory (the one containing `node_modules`) run `npm i` to install the required dependencies
+
+`npm run watch` can be used to hot reload any changes to the extension (once installed on Chrome's extensions page) and is useful for testing
+
+`npm run build` bundles the project into a build folder which can be added as a custom extension by clicking "Load unpacked extension" on the developer tab.
+
+"quickstart.md" better explains the above commands 
 
 ## Contribution
 

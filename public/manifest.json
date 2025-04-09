@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Bitongithub",
+  "name": "BitonRedmineViewer",
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
   "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "description": "Extension to quickly open Biton Redmine pages",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -11,11 +11,8 @@
     "128": "icons/icon_128.png",
     "512": "icons/icon_512.png"
   },
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
-    "default_title": "Bitongithub",
+    "default_title": "RedmineViewer",
     "default_popup": "popup.html"
   },
   "permissions": [
@@ -24,20 +21,9 @@
   "commands": {
     "_execute_action": {
       "suggested_key" : {
-       "default":  "Alt + Shift + R"
+       "default":  "Alt+Shift+R"
       },
       "description": "Activate the extension"
     }
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "run_at": "document_idle",
-      "js": [
-        "contentScript.js"
-      ]
-    }
-  ]
+  }
 }
