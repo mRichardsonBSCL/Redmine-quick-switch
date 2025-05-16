@@ -2,6 +2,7 @@
 
 Biton Redmine Viewer (Quick Opener)
 
+⚠️This is very tempermental and was only made for my own use case without much care for code quality or general use⚠️
 ## Features
 
 - Allows faster navigation to Redmine pages for specific issues allowing a keyboard-only approach 
