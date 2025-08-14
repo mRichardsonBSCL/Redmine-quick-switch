@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "BitonRedmineViewer",
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Extension to quickly open Biton Redmine pages",
   "icons": {
     "16": "icons/icon_16.png",

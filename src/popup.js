@@ -1,7 +1,5 @@
 'use strict';
 
-import './popup.css';
-
 (function() {
   
   function navigateByItem(){
@@ -10,7 +8,6 @@ import './popup.css';
     window.open(href)
   }
 
-  // TODO
   function navigateByText(){
     const itemText = document.getElementById("redmine-text").value
     const href = `http://10.1.101.98:8080/redmine/search?issues=1&q="${itemText}"`
@@ -35,18 +32,25 @@ import './popup.css';
     });
   }
 
-  function switchView(type) {
+  async function switchView(type) {
     // hide all views
     for (const element of document.getElementsByClassName("popup-view")){
       element.style.display = "none"
     };
+    const options = {};
     // only show the correct view
     switch(type){
       case "number":
         document.getElementById("item-number-view").style.display = "flex";
+        document.getElementById('redmine-number').focus();
+        options.mode = "number";
+        await chrome.storage.local.set({options: options});
         break;
       case "text":
         document.getElementById("text-search-view").style.display = "flex";
+        document.getElementById('redmine-text').focus();
+        options.mode = "text";
+        await chrome.storage.local.set({options});
         break;
       default:
         break;
@@ -55,19 +59,19 @@ import './popup.css';
 
   function setUpModeBtns() {
     document.getElementById('number-btn').addEventListener("click", () => {
-      switchView("number")
+      switchView("number");
     })
 
     document.getElementById('text-btn').addEventListener("click", () => {
-      switchView("text")
+      switchView("text");
     })
   }
 
-  document.addEventListener('DOMContentLoaded', function(){
+  document.addEventListener('DOMContentLoaded', async function(){
     setUpButtons();
     setUpModeBtns();
-    switchView("number")
+    const savedData = await chrome.storage.local.get("options")
+    if (savedData?.options?.mode === "text") switchView("text");
+    else switchView("number");
   });
-  document.getElementById('redmine-number').focus()
-
 })();
