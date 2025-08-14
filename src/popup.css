@@ -25,8 +25,31 @@ body {
     padding: 5px;
 }
 
-.counter {
-    display: flex;
+.modes{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .mode-btn{
+        color: black;
+        padding: 4px;
+        border: 1px solid #9CA38E;
+        background-color: #DDE0C3;
+
+        &.active{
+            font-weight: bold;
+            border: 2px solid #7D8573;
+            background-color: #FFE9E4;
+        }
+
+        &:hover{
+            background-color: #FFE9E4;
+        }
+    }
+}
+
+.popup-view {
+    display: none;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;

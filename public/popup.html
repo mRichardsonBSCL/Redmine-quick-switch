@@ -6,12 +6,25 @@
     <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
-  <div class="app"><div id="counter" class="counter">
+  <div class="app">
+    <div class="modes">
+      <button class="mode-btn" id='number-btn' type="button">Item #</button>
+      <button class="mode-btn" id='text-btn' type="button">Text search</button>
+    </div>
+    <div id="item-number-view" class="popup-view">
     <label for="redmine-number">Redmine Item Number: </label>
     <div>
       <input type="number" name="redmine-number" id="redmine-number">
-      <button type="submit" id="submit-btn">➡️</button>
+      <button type="submit" id="item-submit-btn">➡️</button>
     </div>
+    </div>
+    <div id="text-search-view" class="popup-view">
+    <label for="redmine-text">Text to search </label>
+    <div>
+      <input type="text" name="redmine-text" id="redmine-text">
+      <button type="submit" id="text-submit-btn">➡️</button>
+    </div>
+  </div>
   <script defer src="popup.js"></script>
 </body>
 </html>
