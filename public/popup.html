@@ -17,12 +17,18 @@
       <input type="number" name="redmine-number" id="redmine-number">
       <button type="submit" id="item-submit-btn">➡️</button>
     </div>
+    <div class="recent-items"  id="recent-number-items">
+      <!-- This is populated by the chrome.storage api -->
+    </div>
     </div>
     <div id="text-search-view" class="popup-view">
     <label for="redmine-text">Text to search </label>
     <div>
       <input type="text" name="redmine-text" id="redmine-text">
       <button type="submit" id="text-submit-btn">➡️</button>
+    </div>
+    <div class="recent-items"  id="recent-text-items">
+            <!-- This is populated by the chrome.storage api -->
     </div>
   </div>
   <script defer src="popup.js"></script>

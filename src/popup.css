@@ -11,7 +11,7 @@
 
 body {
     width: 350px;
-    height: 100px;
+    min-height: 100px;
     background-color: #feffde;
 }
 
@@ -53,6 +53,20 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin-top: 1.75rem;
+}
+
+.recent-items{
+    display:flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    p { 
+        width: 45%;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+     }
 }
 
 label { 
